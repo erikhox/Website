@@ -110,6 +110,13 @@ section {
     height: auto;
 }
 
+@media (max-width: 768px) {
+    .image img {
+        width: 100%; /* Full width on mobile devices */
+        max-width: none; /* Override the max-width */
+    }
+}
+
 .btn {
     padding: 10px 20px;
     margin: 10px 0;
@@ -172,17 +179,12 @@ footer a:hover {
     display: none; /* Hide both by default */
 }
 
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
-    .contact-container-mobile {
-        display: block; /* Show mobile container */
-    }
-}
+  
 
 /* Media Query for Desktop Devices */
 @media (min-width: 769px) {
     .contact-container-desktop {
-        display: flex; /* Show desktop container */
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
