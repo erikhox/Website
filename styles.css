@@ -168,21 +168,35 @@ footer a:hover {
     color: #cc4608;
 }
 
-.contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 1200px;
-    padding: 20px;
-    margin: 0 auto;
+.contact-container-desktop, .contact-container-mobile {
+    display: none; /* Hide both by default */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .contact-container-mobile {
+        display: block; /* Show mobile container */
+    }
+}
+
+/* Media Query for Desktop Devices */
+@media (min-width: 769px) {
+    .contact-container-desktop {
+        display: flex; /* Show desktop container */
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        width: 100%;
+        padding: 20px;
+        margin: 0 auto;
+    }
 }
 
 .contact-item {
-    flex: 1 1 45%;
+    flex: 1 1 calc(50% - 20px);
+    margin: 10px;
     padding: 20px;
-    box-sizing: border-box;
 }
 
 .contact-item h3 {
@@ -197,6 +211,16 @@ footer a:hover {
     color: #666;
     font-size: 1rem;
     margin: 0;
+    line-height: 1.5;
+}
+
+.contact-item a {
+    color: #FF570A;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #cc4608;
 }
 
 .project-container {
@@ -227,6 +251,13 @@ footer a:hover {
     margin: 0 0 10px;
 }
 
+.project-item h4 {
+    font-family: 'Anonymous Pro', monospace;
+    color: #333;
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+}
+
 .project-item p {
     font-family: 'Martian Mono', monospace;
     color: #666;
@@ -238,6 +269,29 @@ footer a:hover {
     max-width: 80%;
     height: auto;
     margin: 10px 0;
+}
+
+.project-item a {
+    display: block;
+    margin-top: 10px;
+    max-width: 158px;
+}
+
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-column {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding: 20px 0; /* Adjust padding for better spacing on mobile */
+    }
+
+    .project-column h2 {
+        text-align: center;
+    }
 }
 
 .event-container {
@@ -286,6 +340,28 @@ footer a:hover {
     margin: 10px 0;
 }
 
+@media (max-width: 768px) {
+    .event-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .event-item img {
+        max-width: 100%;
+        margin: 0px 0;
+    }
+
+    .event-item p {
+        font-family: 'Martian Mono', monospace;
+        color: #666;
+        font-size: 1rem;
+        margin: 0 0 10px;
+        line-height: 1.5;
+        padding-right: 0px;
+    }
+}
+
 .btn {
     padding: 10px 20px;
     margin: 10px 0;
@@ -303,4 +379,22 @@ footer a:hover {
 
 .btn-primary:hover {
     background-color: #cc4608;
+}
+
+@media (max-width: 768px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .desktop {
+        display: flex;
+    }
+    .mobile {
+        display: none;
+    }
 }
