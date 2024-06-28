@@ -112,8 +112,8 @@ section {
 
 @media (max-width: 768px) {
     .image img {
-        width: 100%; /* Full width on mobile devices */
-        max-width: none; /* Override the max-width */
+        width: 100%;
+        max-width: none;
     }
 }
 
@@ -176,12 +176,12 @@ footer a:hover {
 }
 
 .contact-container-desktop, .contact-container-mobile {
-    display: none; /* Hide both by default */
+    display: none;
 }
 
 @media (max-width: 768px) {
     .contact-container-mobile {
-        display: block; /* Show mobile container */
+        display: block;
     }
 }
 
@@ -292,7 +292,7 @@ footer a:hover {
     .project-column {
         flex: 1 1 100%;
         max-width: 100%;
-        padding: 20px 0; /* Adjust padding for better spacing on mobile */
+        padding: 20px 0;
     }
 
     .project-column h2 {
