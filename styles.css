@@ -269,10 +269,11 @@ footer a:hover {
     color: #666;
     font-size: 1rem;
     margin: 0 0 10px;
+    min-height: 60px;
 }
 
 .project-item img {
-    max-width: 80%;
+    width: 80%;
     height: auto;
     margin: 10px 0;
 }
